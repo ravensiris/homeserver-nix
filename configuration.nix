@@ -23,6 +23,7 @@ in {
       ./tailscale.nix
       ./technitium.nix
       ./navidrome.nix
+      ./home-assistant.nix
     ]
     ++ lib.optionals (!lib.inPureEvalMode) ["${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"];
 
