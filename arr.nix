@@ -11,8 +11,6 @@ with lib; {
   };
 
   config = {
-    # networking.firewall.allowedTCPPorts = [5030];
-
     services.caddy.virtualHosts."http://jellyfin.komorebi.lan".extraConfig = ''
       reverse_proxy :8096
     '';
@@ -42,17 +40,14 @@ with lib; {
 
       jellyfin = {
         enable = true;
-        # openFirewall = true;
       };
 
       prowlarr = {
         enable = true;
-        # openFirewall = true;
       };
 
       sonarr = {
         enable = true;
-        # openFirewall = true;
       };
     };
 

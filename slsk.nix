@@ -5,7 +5,6 @@
     domain = null;
 
     environmentFile = "/run/keys/slskd.env.secret";
-    openFirewall = true;
     settings = {
       directories.downloads = "/data/soulseek";
 

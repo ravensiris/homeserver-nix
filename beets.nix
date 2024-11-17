@@ -7,7 +7,7 @@
   dataDir = "/data/media.state";
   mediaDir = "/data/media";
 in {
-  networking.firewall.allowedTCPPorts = [9393];
+  # networking.firewall.allowedTCPPorts = [9393];
 
   users.groups.media.gid = 993;
   users.users.streamer.uid = 993;
