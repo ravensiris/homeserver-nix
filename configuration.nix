@@ -97,5 +97,5 @@ in {
   users.users."root".openssh.authorizedKeys.keys = masterSSHKeys;
   security.sudo.wheelNeedsPassword = false;
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }

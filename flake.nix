@@ -2,7 +2,7 @@
   description = "homeserver nixos config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     impermanence.url = "github:nix-community/impermanence";
     disko.url = "github:nix-community/disko";
     nixarr.url = "github:rasmus-kirk/nixarr";
