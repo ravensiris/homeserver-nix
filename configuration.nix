@@ -24,6 +24,7 @@ in {
       ./technitium.nix
       ./navidrome.nix
       ./home-assistant.nix
+      ./syncthing.nix
     ]
     ++ lib.optionals (!lib.inPureEvalMode) ["${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"];
 
