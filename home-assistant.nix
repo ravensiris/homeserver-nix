@@ -1,4 +1,13 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  sources = {
+    bambu = pkgs.fetchFromGitHub {
+      owner = "greghesp";
+      repo = "ha-bambulab";
+      rev = "1ebaf4cdc84aebf6d5802baf6899a1ab9c41b01a";
+      sha256 = "sha256-T3C90H354onzmlyIxmlQ7pCyinGmlb2FVTpumjhcDGU=";
+    };
+  };
+in {
   services.caddy.virtualHosts."http://home.komorebi.lan".extraConfig = ''
     reverse_proxy :8123
   '';
@@ -50,4 +59,9 @@
       "/var/lib/hass"
     ];
   };
+
+  systemd.tmpfiles.rules = [
+    "C /var/lib/hass/custom_components/bambu_lab - - - - ${sources.bambu}/custom_components/bambu_lab"
+    "Z /var/lib/hass/custom_components 770 hass hass - -"
+  ];
 }
