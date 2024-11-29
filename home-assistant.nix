@@ -33,6 +33,30 @@ in {
       "mqtt"
     ];
     customLovelaceModules = with pkgs.unstable.home-assistant-custom-lovelace-modules; [card-mod];
+    lovelaceConfig = {
+      title = "Home";
+      views = [
+        {
+          title = "Home";
+          icon = "mdi:home";
+          cards = [
+            {
+              type = "markdown";
+              title = "Lovelace";
+              content = "Welcome home!";
+              style = {
+                color = "red";
+              };
+            }
+            {
+              type = "weather-forecast";
+              entity = "weather.openweathermap";
+              forecast_type = "hourly";
+            }
+          ];
+        }
+      ];
+    };
     config = {
       # Includes dependencies for a basic setup
       # https://www.home-assistant.io/integrations/default_config/
