@@ -32,7 +32,7 @@ in {
       "sonarr"
       "mqtt"
     ];
-    customLovelaceModules = with pkgs.home-assistant-custom-lovelace-modules; [card-mod];
+    customLovelaceModules = with pkgs.unstable.home-assistant-custom-lovelace-modules; [card-mod];
     config = {
       # Includes dependencies for a basic setup
       # https://www.home-assistant.io/integrations/default_config/
