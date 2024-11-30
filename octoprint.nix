@@ -1,0 +1,5 @@
+{...}: {
+  services.octoprint = {
+    enable = true;
+  };
+}

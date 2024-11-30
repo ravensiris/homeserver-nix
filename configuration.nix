@@ -25,6 +25,7 @@ in {
       ./navidrome.nix
       ./home-assistant.nix
       ./syncthing.nix
+      ./octoprint.nix
     ]
     ++ lib.optionals (!lib.inPureEvalMode) ["${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"];
 
