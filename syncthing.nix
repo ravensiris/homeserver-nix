@@ -19,4 +19,6 @@
     };
   };
   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
+
+  networking.firewall.allowedTCPPorts = [8384];
 }
